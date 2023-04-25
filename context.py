@@ -16,7 +16,6 @@ sub_details = None
 extranonce1 = None
 extranonce2_size = None
 
-# =====================================
-# Programmer : Mmdrza
-# Programmer : CPScript
-# =====================================
+# ||=======================||
+# || DarkMater by: Disease ||
+# ||=======================||
