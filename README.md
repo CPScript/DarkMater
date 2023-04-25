@@ -10,8 +10,11 @@
 
 ---
 
-First change line 27 in ```Miner.py```
+First add your wallet to line 43 in ```Miner.py```
 ```
+Looks like this: 
+
+address = '16p9y6EstGYcnofGNvUJMEGKiAWhAr1uR8' 
 
 ```
 
