@@ -15,6 +15,22 @@ from colorama import Back , Fore , Style
 
 import context as ctx
 
+import os
+from os  import system
+from subprocess import call
+from platform import platform
+
+puk = platform()[0], platform()[1],  platform()[2], platform()[3], platform()[4], platform()[5], platform()[6]
+
+if puk == ('W', 'i', 'n', 'd', 'o', 'w', 's'):
+    delet = 'cls'
+    dr = '\\'
+else:
+    delet = 'clear'
+    dr = '/'
+
+os.system(delet)
+
 
 sock = None
 
@@ -292,6 +308,8 @@ def StartMining() :
     miner_t.start()
     logg("[*] Bitcoin Miner Thread Started")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Bitcoin Miner Thread Started")
+    time.sleep(5)
+    os.system(delte)
     print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , ' Logged In As Disease ' , Fore.BLUE , ' )~~--------------')
 
 
