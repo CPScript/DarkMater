@@ -10,23 +10,16 @@
 
 ---
 
-First install this package :
+First change line 27 in ```Miner.py```
 ```
-pip install binascii
-pip install traceback
-pip install signal
-pip install requests
-pip install colorama
-pip install lxml
-```
-
-For insert Your BTC Address Wallet in File `Miner.py` in Line 27 Changed This Line:
 
 ```
 
-# Changed this Address And Insert Your BTC Wallet
+Then type this into the terminal : 
+```
 
-address = '16p9y6EstGYcnofGNvUJMEGKiAWhAr1uR8' 
+python Install.py
+python 
 
 ``` 
 ---
