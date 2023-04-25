@@ -116,9 +116,8 @@ class ExitedThread(threading.Thread) :
 
 def bitcoin_miner(t , restarted = False) :
     if restarted :
-        logg('\n[*] Miner restarted')
-        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Programmers = Mmdrza & CPScript')
-        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , '[*] Miner Restarted')
+        logg('\n[*] Restarted')
+        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , '[*] Restarted')
         time.sleep(5)
 
     target = (ctx.nbits[2 :] + '00' * (int(ctx.nbits[:2] , 16) - 3)).zfill(64)
@@ -309,8 +308,11 @@ def StartMining() :
     logg("[*] Bitcoin Miner Thread Started")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Bitcoin Miner Thread Started")
     time.sleep(5)
-    os.system(delte)
-    print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , ' Logged In As Disease ' , Fore.BLUE , ' )~~--------------')
+    os.system(delet)
+    print(Fore.BLUE , '--------------~~(<>) ' , Fore.YELLOW , ' DarkMater BTC Miner ' , Fore.BLUE , ' (<>)~~--------------')
+    print(Fore.BLUE , '----------------~~> ' , Fore.YELLOW , '    By : Disease  ' , Fore.BLUE , '      <~~----------------')
+    print(" ")
+    print("Status: ")
 
 
 if __name__ == '__main__' :
