@@ -1,4 +1,4 @@
-# DarkMater Bitcoin Miner
+# DarkMater BTC Miner
 ----
 
 
