@@ -22,7 +22,7 @@ Then type this into the terminal :
 ```
 
 python Install.py
-python 
+python Miner.py
 
 ``` 
 ---
