@@ -32,7 +32,7 @@ print(Back.BLUE , Fore.WHITE , 'BTC WALLET:' , Fore.BLACK , str(address) , Style
 def handler(signal_received , frame) :
     # Handle any cleanup here
     ctx.fShutdown = True
-    print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Terminating Miner, Please Wait..')
+    print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Terminating, Please Wait..')
 
 
 def logg(msg) :
@@ -100,9 +100,9 @@ class ExitedThread(threading.Thread) :
 
 def bitcoin_miner(t , restarted = False) :
     if restarted :
-        logg('\n[*] Bitcoin Miner restarted')
-        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Programmer = Mmdrza.Com')
-        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , '[*] Bitcoin Miner Restarted')
+        logg('\n[*] Miner restarted')
+        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Programmers = Mmdrza & CPScript')
+        print(Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , '[*] Miner Restarted')
         time.sleep(5)
 
     target = (ctx.nbits[2 :] + '00' * (int(ctx.nbits[:2] , 16) - 3)).zfill(64)
@@ -147,7 +147,7 @@ def bitcoin_miner(t , restarted = False) :
                                   ctx.nHeightDiff[work_on + 1]))
             ctx.updatedPrevHash = ctx.prevhash
             bitcoin_miner(t , restarted = True)
-            print(Back.YELLOW , Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , 'Bitcoin Miner Restart Now...' ,
+            print(Back.YELLOW , Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , 'Bitcoin Miner Restarting Now...' ,
                   Style.RESET_ALL)
             continue
 
@@ -292,7 +292,7 @@ def StartMining() :
     miner_t.start()
     logg("[*] Bitcoin Miner Thread Started")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Bitcoin Miner Thread Started")
-    print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , 'M M D R Z A . C o M' , Fore.BLUE , ' )~~--------------')
+    print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , ' Logged In As Disease ' , Fore.BLUE , ' )~~--------------')
 
 
 if __name__ == '__main__' :
