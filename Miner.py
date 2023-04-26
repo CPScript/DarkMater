@@ -1,3 +1,9 @@
+# ||==========================================||
+# || DarkMater by: Disease, known as CPScript ||
+# ||==========================================||
+
+
+
 import binascii # By Disease
 import hashlib # By Disease
 import json # By Disease
