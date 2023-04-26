@@ -2,7 +2,7 @@
 # || DarkMater by: Disease, known as CPScript ||
 # ||==========================================||
 
-
+# ============================Start================================
 
 import binascii # By Disease
 import hashlib # By Disease
@@ -349,3 +349,5 @@ def StartMining() : # By Disease
 if __name__ == '__main__' : # By Disease
     signal(SIGINT , handler) # By Disease
     StartMining() # By Disease
+   
+# ============================End================================
