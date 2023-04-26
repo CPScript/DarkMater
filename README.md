@@ -15,8 +15,6 @@ First add your wallet to line 43 in ```Miner.py```
 Looks like this: 
 address = 'bc1q4uuexl9p2tkgdzpzpmtu8wtrckyt5lq95wqy4n' 
 
-the address requests 1 btc... so if you could... send me one btc <3
-
 ```
 
 Then type this into the terminal : 
