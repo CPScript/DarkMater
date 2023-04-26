@@ -167,7 +167,7 @@ def bitcoin_miner(t , restarted = False) : # By Disease
             continue # By Disease
  # By Disease
         nonce = hex(random.randint(0 , 2 ** 32 - 1))[2 :].zfill(8)  # nNonce   #hex(int(nonce,16)+1)[2:] # By Disease
-        blockheader = ctx.version + ctx.prevhash + merkle_root + ctx.ntime + ctx.nbits + nonce + \ # By Disease
+        blockheader = ctx.version + ctx.prevhash + merkle_root + ctx.ntime + ctx.nbits + nonce + \
                       '000000800000000000000000000000000000000000000000000000000000000000000000000000000000000080020000' # By Disease
         hash = hashlib.sha256(hashlib.sha256(binascii.unhexlify(blockheader)).digest()).digest() # By Disease
         hash = binascii.hexlify(hash).decode() # By Disease
@@ -197,7 +197,7 @@ def bitcoin_miner(t , restarted = False) : # By Disease
             logg('[*] Blockheader: {}'.format(blockheader)) # By Disease
  # By Disease
             print(Fore.YELLOW , '[*] Blockheader: {}'.format(blockheader)) # By Disease
-            payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 \ # By Disease
+            payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 \
                             + '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n' , # By Disease
                             'utf-8') # By Disease
             logg('[*] Payload: {}'.format(payload)) # By Disease
@@ -226,7 +226,7 @@ def block_listener(t) : # By Disease
  # By Disease
     responses = [json.loads(res) for res in response.decode().split('\n') if # By Disease
                  len(res.strip()) > 0 and 'mining.notify' in res] # By Disease
-    ctx.job_id , ctx.prevhash , ctx.coinb1 , ctx.coinb2 , ctx.merkle_branch , ctx.version , ctx.nbits , ctx.ntime , ctx.clean_jobs = \ # By Disease
+    ctx.job_id , ctx.prevhash , ctx.coinb1 , ctx.coinb2 , ctx.merkle_branch , ctx.version , ctx.nbits , ctx.ntime , ctx.clean_jobs = \
         responses[0]['params'] # By Disease
     # do this one time, will be overwriten by mining loop when new block is detected # By Disease
     ctx.updatedPrevHash = ctx.prevhash # By Disease
@@ -245,7 +245,7 @@ def block_listener(t) : # By Disease
         if responses[0]['params'][1] != ctx.prevhash : # By Disease
             # new block detected on network # By Disease
             # update context job data # By Disease
-            ctx.job_id , ctx.prevhash , ctx.coinb1 , ctx.coinb2 , ctx.merkle_branch , ctx.version , ctx.nbits , ctx.ntime , ctx.clean_jobs = \ # By Disease
+            ctx.job_id , ctx.prevhash , ctx.coinb1 , ctx.coinb2 , ctx.merkle_branch , ctx.version , ctx.nbits , ctx.ntime , ctx.clean_jobs = \
                 responses[0]['params'] # By Disease
 
 
