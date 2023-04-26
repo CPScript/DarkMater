@@ -16,6 +16,6 @@ sub_details = None
 extranonce1 = None
 extranonce2_size = None
 
-# ||=======================||
-# || DarkMater by: Disease ||
-# ||=======================||
+# ||==========================================||
+# || DarkMater by: Disease, known as CPScript ||
+# ||==========================================||
